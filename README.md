@@ -6,10 +6,7 @@ Este proyecto fue desarrollado como parte del curso EL5207-1 Laboratorio de Tecn
 * Mide los niveles de luz utilizando un fotoresistor.
 * Transmite los datos de luminosidad a la Raspberry Pi mediante el ESP8266.
 * La Raspberry Pi procesa los datos y realiza acciones en función de la intensidad de la luz.
-* Puede utilizarse para automatizar sistemas de iluminación, controlar dispositivos en función de la luz ambiental, entre otros.
 
-## Capturas de pantalla
-[Aquí puedes agregar capturas de pantalla o imágenes relevantes del proyecto]
 
 
 ## Materiales y Componentes
@@ -32,7 +29,6 @@ Este proyecto fue desarrollado como parte del curso EL5207-1 Laboratorio de Tecn
 1. Enciende el sistema y espera a que se establezca la conexión entre la Raspberry Pi y el ESP8266.
 2. El fotoresistor medirá continuamente los niveles de luz y enviará los datos a la Raspberry Pi.
 3. La Raspberry Pi procesará los datos y realizará acciones basadas en la intensidad de la luz detectada.
-[Aquí puedes agregar instrucciones específicas sobre las acciones que realiza tu proyecto en función de la luminosidad]
 
 
 ## Contribución
