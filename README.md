@@ -39,11 +39,9 @@ Este proyecto fue desarrollado como parte del curso EL5207-1 Laboratorio de Tecn
 Actualmente, este proyecto no acepta contribuciones externas. Sin embargo, si encuentras algún problema o tienes sugerencias, no dudes en crear un "issue" en el repositorio de GitHub.
 
 
-## Licencia
-[Aquí puedes indicar la licencia bajo la cual se distribuye el proyecto]
 
 ## Autor
-Este proyecto fue desarrollado por [Tu nombre]. Puedes contactarme por correo electrónico en [tu correo electrónico] o visitar mi sitio web [opcional].
+Este proyecto fue desarrollado por Bruno Araya y Sebastián Versluys. Puedes contactarme por correo electrónico en sebastian.versluys@ug.uchile.cl o bruno.araya.h@ug.uchile.cl.
 
 ## Agradecimientos
 Agradecemos al curso EL5207-1 Laboratorio de Tecnologías de Información y Comunicaciones por proporcionar el contexto y los recursos necesarios para la realización de este proyecto.
