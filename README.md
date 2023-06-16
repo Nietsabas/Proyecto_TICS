@@ -45,3 +45,7 @@ Este proyecto fue desarrollado por Bruno Araya y Sebastián Versluys. Puedes con
 
 ## Agradecimientos
 Agradecemos al curso EL5207-1 Laboratorio de Tecnologías de Información y Comunicaciones por proporcionar el contexto y los recursos necesarios para la realización de este proyecto.
+
+## Foto de los autores
+
+![Logo de mi proyecto](https://github.com/Nietsabas/Proyecto_TICS/blob/main/foto_autores.jpg)
