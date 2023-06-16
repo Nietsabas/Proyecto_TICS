@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Table layout</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .filter {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, #4f5bd5 0%, #c84bc9 100%);
+      opacity: .7;
+    }
+
+    table {
+      z-index: 2;
+      border-collapse: collapse;
+      border-spacing: 0;
+      box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+    }
+
+    td,
+    th {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ba68c8;
+      color: #fafafa;
+      font-family: 'Open Sans', Sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+
+    tr {
+      width: 100%;
+      background-color: #fafafa;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    tr:nth-child(even) {
+      background-color: #eeeeee;
+    }
+
+    .title {
+        text-align: center; /* Alinea el texto al centro */
+        font-family: 'Open Sans', Sans-serif;
+        font-size: 24px;
+        font-weight: 200;
+        color: #ffffff;
+        text-transform: uppercase;
+        background-color: #e94ca1;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+        z-index: 2;
+    }
+
+    .contact-info {
+        position: absolute;
+        top: calc(70% + 140px); /* Ajusta la posición vertical del bloque de contacto */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Open Sans', Sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        color: #444444;
+        text-align: center;
+        z-index: 2;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+        width: 80%;
+        margin-bottom: 80px;
+    }
+
+    hr {
+      margin: 0;
+      width: 1px;
+      height: 100%;
+      border: none;
+      border-left: 1px solid #eeeeee;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+    }
+
+    .contact-info-item i {
+      margin-right: 5px;
+    }
+
+    .gif-container {
+      position: absolute;
+      top: calc(50% + 50px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      width: 60%;
+    }
+
+    .gif-container img {
+      width: 100%;
+    }
+
+    .table-container {
+        margin: 0px;
+        max-width: 800px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 2px 15px rgba(64, 64, 64, .7);
+        overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="filter"></div>
+  <div class="table-container">
+    <table id="data-table"></table>
+  </div>
+
+  <script>
+    function actualizarTabla() {
+      fetch('archivo_.txt')  // Reemplaza 'ruta/al/archivo.csv' con la ubicación real de tu archivo
+        .then(response => response.text())
+        .then(data => {
+          const table = document.getElementById('data-table');
+          table.innerHTML = ''; // Limpiar la tabla antes de actualizarla
+          const lines = data.split('\n');
+          lines.forEach((line, index) => {
+            // Verificar si la línea contiene al menos 3 ';'
+            if (line.split(';').length >= 3) {
+              const cells = line.split(';');
+              const row = document.createElement('tr');
+              cells.forEach(cell => {
+                const cellElement = document.createElement(index === 0 ? 'th' : 'td');
+                cellElement.textContent = cell;
+                row.appendChild(cellElement);
+              });
+              table.appendChild(row);
+            }
+          });
+        });
+    }
+
+    setInterval(actualizarTabla, 5000);
+  </script>
+
+  <div class="title">Tabla de mediciones de emisiones de luz</div>
+  <div class="contact-info">
+    <div class="contact-info-item">
+      <i class="fas fa-building"></i>
+      <p>LuSecurity</p>
+    </div>
+    <hr>
+    <div class="contact-info-item">
+      <i class="fas fa-phone"></i>
+      <p>Número de teléfono: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">+569 53656261</a></p>
+    </div>
+    <hr>
+    <div class="contact-info-item">
+      <i class="fas fa-info-circle"></i>
+      <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Más información</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
